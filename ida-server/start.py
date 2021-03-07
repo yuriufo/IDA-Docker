@@ -42,10 +42,12 @@ def execute_script():
         timeout = None if 'timeout' not in data else int(data['timeout'])
         _, exit_code = pexpect.run(" ".join(command), timeout=timeout, withexitstatus=True)
         if exit_code == 0:
-            with open(os.path.join(saved_path, 'result.json'), "rb") as f:
+            with open(os.path.join(saved_path, '_code.json'), "rb") as f:
                 result = f.read()
     except pexpect.TIMEOUT:
         return jsonify(error='request to IDA timed out'), 408
+    except Exception:
+        return jsonify(error='got an Exception'), 500
     finally:
         os.system("rm -rf {0}".format(saved_path))
 

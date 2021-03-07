@@ -25,7 +25,7 @@ if __name__ == "__main__":
     ida_auto.auto_wait()
     binary_name = ida_nalt.get_root_filename().split('.')[0]
     path = ida_nalt.get_input_file_path()[:-len(ida_nalt.get_root_filename())]
-    outputPath = os.path.join(path, 'result.json')
+    outputPath = os.path.join(path, '_code.json')
     try:
         main()
         # 输出特征为json
