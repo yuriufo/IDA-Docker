@@ -20,4 +20,4 @@ Use Docker to apply IDA Pro (7.5) and Python3 for automated malware analysis.
 
 ## Run
 
-`$ sudo docker run -d --rm --name ida -p 7777:80 ida-server`
+`$ sudo docker run -d --rm --name ida -v <LocalScriptDirectoryPath>:/share/data -p 7777:80 ida-server`

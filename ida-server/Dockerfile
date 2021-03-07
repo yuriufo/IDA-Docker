@@ -13,6 +13,6 @@ WORKDIR /home/idauser/ida-server
 
 COPY . .
 
-WORKDIR /home/idauser/ida-server/server
+VOLUME /share/data
 
 CMD ["gunicorn", "start:app", "-c", "./gunicorn.conf.py"]

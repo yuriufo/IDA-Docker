@@ -33,5 +33,5 @@ if __name__ == "__main__":
             f.write(json.dumps(features)) # , indent=2
     except Exception as e:
         # 发生异常
-        traceback.print_exc(file=open(outputPath, "error"))
+        traceback.print_exc(file=open(outputPath, "a"))
     idc.qexit(0)

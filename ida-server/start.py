@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import os
 import pexpect
 from base64 import b64encode
@@ -10,7 +12,7 @@ app.config['JSONIFY_PRETTYPRINT_REGULAR'] = False
 
 
 idat_path = '/home/idauser/idapro-7.5/idat64'
-script_path = '/home/idauser/ida-server/script.py'
+script_path = '/share/data/script.py'
 
 
 @app.errorhandler(Exception)
